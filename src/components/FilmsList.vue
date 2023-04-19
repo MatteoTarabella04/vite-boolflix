@@ -13,7 +13,8 @@ export default {
 }
 </script>
 <template>
-   <ul v-for="film in this.store.films">
+   <ul v-for="film in this.store.films" class="list-unstyled">
+      <li><img :src="store.posterPath + film.poster_path" alt=""></li>
       <li v-if="film.title == 'title'"> <b>Title: {{ film.title }}</b> </li>
       <li v-else> <b>Title: {{ film.name }}</b> </li>
       <li v-if="film.original_title == 'original_title'"> Original Title: {{ film.original_title }}</li>
