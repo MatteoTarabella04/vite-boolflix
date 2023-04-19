@@ -12,10 +12,10 @@ export default {
       }
    },
    methods: {
-      performSearch() {
+      performSearch(url) {
          console.log(this.store.searchText);
-         const url = this.store.API_FILMS_URL + `&query=${this.store.searchText}`;
-         this.store.callApi(url);
+         const searchUrl = url + `&query=${this.store.searchText}`;
+         this.store.callApi(searchUrl);
       },
    },
    mounted() {
@@ -26,7 +26,7 @@ export default {
 </script>
 <template>
    <div class="container">
-      <SearchBox @search="performSearch()" />
+      <SearchBox @search="performSearch(this.store.API_FILMS_URL), performSearch(this.store.API_SERIES_URL)" />
       <FilmsList />
    </div>
 </template>
