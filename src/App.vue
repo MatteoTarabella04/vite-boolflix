@@ -34,7 +34,7 @@ export default {
     <ul v-for="film in this.store.films">
       <li> <b>Title: {{ film.title }}</b> </li>
       <li>Original Title: {{ film.original_title }}</li>
-      <li>Original Lenguage: {{ film.original_lenguage }}</li>
+      <li>Original Language: {{ film.original_language }}</li>
       <li>Vote: {{ film.vote_average }}</li>
     </ul>
   </div>
