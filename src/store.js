@@ -4,6 +4,7 @@ import axios from "axios";
 export const store = reactive({
    searchText: '',
    API_FILMS_URL: 'https://api.themoviedb.org/3/search/movie?api_key=7be289e2af34e97e1f3298980f1e7502',
+   API_SERIES_URL: 'https://api.themoviedb.org/3/search/tv?api_key=7be289e2af34e97e1f3298980f1e7502',
    films: null,
 
    callApi(url) {
