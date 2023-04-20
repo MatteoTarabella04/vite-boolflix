@@ -12,21 +12,19 @@ export default {
       }
    },
    methods: {
-      performSearch(url) {
+      performSearch(urlF, urlS) {
          console.log(this.store.searchText);
-         const searchUrl = url + `&query=${this.store.searchText}`;
-         this.store.callApi(searchUrl);
+         const searchUrlF = urlF + `&query=${this.store.searchText}`;
+         const searchUrlS = urlS + `&query=${this.store.searchText}`;
+         this.store.callApiFilms(searchUrlF);
+         this.store.callApiSeries(searchUrlS);
       },
    },
-   mounted() {
-      this.store.callApi(store.API_FILMS_URL)
-   },
-
 }
 </script>
 <template>
    <div class="container">
-      <SearchBox @search="performSearch(this.store.API_FILMS_URL), performSearch(this.store.API_SERIES_URL)" />
+      <SearchBox @search="performSearch(this.store.API_FILMS_URL, this.store.API_SERIES_URL)" />
       <FilmsList />
    </div>
 </template>
