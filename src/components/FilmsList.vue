@@ -16,7 +16,9 @@ export default {
 </script>
 <template>
    <div class="container">
-      <FilmItem />
+      <div class="row row-cols-5">
+         <FilmItem />
+      </div>
    </div>
 </template>
 
