@@ -10,6 +10,11 @@ export default {
    }, methods: {
       transformVote(vote) {
          return Math.ceil(vote / 2)
+      },
+      isFilm(film) {
+         if ((film.title) || (film.original_title)) {
+            return true
+         }
       }
    }
 
@@ -19,11 +24,10 @@ export default {
 <template>
    <ul v-for="film in this.store.films" class="list-unstyled">
       <li><img :src="store.posterPath + film.poster_path" alt=""></li>
-      <li v-if="film.title == 'title'"> <b>Title: {{ film.title }}</b> </li>
+      <li v-if="isFilm(film)"> <b>Title: {{ film.title }}</b> </li>
       <li v-else> <b>Title: {{ film.name }}</b> </li>
-      <li v-if="film.original_title == 'original_title'"> Original Title: {{ film.original_title }}</li>
+      <li v-if="isFilm(film)"> Original Title: {{ film.original_title }}</li>
       <li v-else>Original Title: {{ film.original_name }} </li>
-      <!-- <li>Original Title: {{ film.original_title }}</li> -->
       <li v-if="film.original_language == 'en'">
          Original Language: <img src="https://flagcdn.com/w20/gb.png" width="20" :alt="film.original_language">
       </li>
