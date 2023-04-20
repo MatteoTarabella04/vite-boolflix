@@ -19,6 +19,7 @@ export default {
          const searchUrlS = urlS + `&query=${this.store.searchText}`;
          this.store.callApiFilms(searchUrlF);
          this.store.callApiSeries(searchUrlS);
+         this.store.searchText = '';
       },
    },
 
