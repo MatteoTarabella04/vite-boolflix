@@ -13,7 +13,10 @@ export default {
 }
 </script>
 <template>
-   <FilmsList />
+   <main id="app_main">
+      <FilmsList />
+   </main>
+   <!-- /#app_main -->
 </template>
 
 
