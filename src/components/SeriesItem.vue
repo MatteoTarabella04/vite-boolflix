@@ -104,6 +104,10 @@ export default {
    &:hover {
       .card {
          background-color: black;
+         transform: scale(1.05);
+         border: none;
+         box-shadow: inset 0px 0px 10px 5px red;
+
 
          img {
             opacity: 0.1;
@@ -124,6 +128,7 @@ export default {
 
 .card {
    min-height: 100%;
+   border: red
 }
 
 #hidden_content {
