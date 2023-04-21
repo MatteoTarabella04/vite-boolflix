@@ -108,6 +108,10 @@ export default {
 
       #hidden_content {
          display: block;
+
+         img {
+            opacity: 1;
+         }
       }
 
    }

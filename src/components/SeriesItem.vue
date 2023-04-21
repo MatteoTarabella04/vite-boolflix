@@ -22,7 +22,7 @@ export default {
          </div>
          <img v-else :src="store.posterPath + series.poster_path" alt="" height="350">
          <div class="content" id="hidden_content">
-            <ul class="list-unstyled p-2">
+            <ul class="list-unstyled p-4">
 
                <!-- Info -->
                <li> <b>Title: {{ series.name }}</b> </li>
@@ -30,36 +30,47 @@ export default {
 
                <!-- Flags -->
                <li v-if="series.original_language == 'en'">
-                  Original Language: <img src="https://flagcdn.com/w20/gb.png" width="20" :alt="series.original_language">
+                  <b>Original Language:</b>
+                  <img src="https://flagcdn.com/w20/gb.png" width="20" :alt="series.original_language">
                </li>
                <li v-else-if="series.original_language == 'ar'">
-                  Original Language: <img src="https://flagcdn.com/w20/ae.png" width="20" :alt="series.original_language">
+                  <b>Original Language:</b>
+                  <img src="https://flagcdn.com/w20/ae.png" width="20" :alt="series.original_language">
                </li>
                <li v-else-if="series.original_language == 'el'">
-                  Original Language: <img src="https://flagcdn.com/w20/gr.png" width="20" :alt="series.original_language">
+                  <b>Original Language:</b>
+                  <img src="https://flagcdn.com/w20/gr.png" width="20" :alt="series.original_language">
                </li>
                <li v-else-if="series.original_language == 'ja'">
-                  Original Language: <img src="https://flagcdn.com/w20/jp.png" width="20" :alt="series.original_language">
+                  <b>Original Language:</b>
+                  <img src="https://flagcdn.com/w20/jp.png" width="20" :alt="series.original_language">
                </li>
                <li v-else-if="series.original_language == 'zh'">
-                  Original Language: <img src="https://flagcdn.com/w20/cn.png" width="20" :alt="series.original_language">
+                  <b>Original Language:</b>
+                  <img src="https://flagcdn.com/w20/cn.png" width="20" :alt="series.original_language">
                </li>
                <li v-else-if="series.original_language == 'ko'">
-                  Original Language: <img src="https://flagcdn.com/w20/kr.png" width="20" :alt="series.original_language">
+                  <b>Original Language:</b>
+                  <img src="https://flagcdn.com/w20/kr.png" width="20" :alt="series.original_language">
                </li>
                <li v-else-if="series.original_language == 'ta'">
-                  Original Language: <img src="https://flagcdn.com/w20/in.png" width="20" :alt="series.original_language">
+                  <b>Original Language:</b>
+                  <img src="https://flagcdn.com/w20/in.png" width="20" :alt="series.original_language">
                </li>
                <li v-else-if="series.original_language == 'hi'">
-                  Original Language: <img src="https://flagcdn.com/w20/in.png" width="20" :alt="series.original_language">
+                  <b>Original Language:</b>
+                  <img src="https://flagcdn.com/w20/in.png" width="20" :alt="series.original_language">
                </li>
                <li v-else-if="series.original_language == 'uk'">
-                  Original Language: <img src="https://flagcdn.com/w20/ua.png" width="20" :alt="series.original_language">
+                  <b>Original Language:</b>
+                  <img src="https://flagcdn.com/w20/ua.png" width="20" :alt="series.original_language">
                </li>
                <li v-else>
-                  Original Language: <img :src="`https://flagcdn.com/w20/${series.original_language}.png`" width="20"
+                  <b>Original Language:</b>
+                  <img :src="`https://flagcdn.com/w20/${series.original_language}.png`" width="20"
                      :alt="series.original_language">
                </li>
+
 
                <!-- Stars -->
                <li>
@@ -101,6 +112,10 @@ export default {
 
       #hidden_content {
          display: block;
+
+         img {
+            opacity: 1;
+         }
       }
 
    }
