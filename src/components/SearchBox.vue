@@ -16,7 +16,7 @@ export default {
    <div class="searchBox d-flex gap-4 align-items-center">
       <div class="input-group">
          <input type="text" class="form-control bg-dark border-danger text-light" placeholder="Search"
-            v-model="store.searchText">
+            v-model="store.searchText" @keyup.enter="$emit('search')">
          <button class="btn btn-outline-danger" type="button" @click="$emit('search')">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
                viewBox="0 0 16 16">
