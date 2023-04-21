@@ -35,4 +35,7 @@ export const store = reactive({
             console.error(err.message);
          })
    },
+   transformVote(vote) {
+      return Math.ceil(vote / 2)
+   },
 })
