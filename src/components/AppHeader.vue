@@ -35,9 +35,9 @@ export default {
                </div>
                <div class="menu">
                   <ul class="list-unstyled m-0 d-flex align-items-center gap-3">
-                     <li><a href="#" class="text-light text-decoration-none">Home</a></li>
-                     <li><a href="#" class="text-light text-decoration-none">Home</a></li>
-                     <li><a href="#" class="text-light text-decoration-none">Home</a></li>
+                     <li><a href="/" class="text-light text-decoration-none" aria-pressed="true">Home</a></li>
+                     <li><a href="#movies_sec" class="text-light text-decoration-none">Movies</a></li>
+                     <li><a href="#series_sec" class="text-light text-decoration-none">Tv Series</a></li>
                   </ul>
                </div>
             </div>
